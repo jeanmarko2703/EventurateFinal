@@ -1,0 +1,601 @@
+﻿<!DOCTYPE html>
+ <html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+
+    	<!-- Metas -->
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+		<meta name="description" content="Eventurate - Busca tu nueva aventura ">
+		
+
+		<!-- Title  -->
+		<title>Eventurate</title>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img2/favicon.ico">
+
+		<!-- Google Fonts -->
+		<link href="../../css.css?family=Poppins:200,300,400,500,600,700,800" rel="stylesheet">
+		<link href="../../css-1.css?family=Poiret+One" rel="stylesheet">
+        <link href="../../css-2.css?family=Muli:300,400,600,700,800" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link rel="stylesheet" href="css2/plugins.css">
+
+        <!-- Core Style Css -->
+        <link rel="stylesheet" href="css2/style.css">
+        
+
+    </head>
+
+    <body>
+
+    	<!-- =====================================
+    	==== Start Loading -->
+
+    	<div class="loading">
+    		<div class="text-center middle">
+    			<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    		</div>
+    	</div>
+        
+    	<!-- End Loading ====
+    	======================================= -->
+
+       
+    	<!-- =====================================
+    	==== Start Navbar -->
+
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+
+            <!-- Logo -->
+            <a class="logo" href="#">
+                <img src="img2/logo-light.png" alt="logo">          
+            </a>
+
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="icon-bar"><i class="fas fa-bars"></i></span>
+			  </button>
+
+			  <!-- navbar links -->
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav ml-auto">
+			      <li class="nav-item">
+			        <a class="nav-link active" href="#" data-scroll-nav="0">Inicio</a>
+			      </li>
+			      <li class="nav-item">
+                    <a class="nav-link" href="#" data-scroll-nav="1">Nosotros</a>
+                  </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#" data-scroll-nav="2">Servicios</a>
+			      </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-scroll-nav="3">Developers</a>
+                  </li>
+			      <li class="nav-item">
+			        <a class="nav-link" th:href="@{/login}" >Log in</a>
+			      </li>
+			     
+			    </ul>
+			  </div>
+			</div>
+		</nav>
+
+    	<!-- End Navbar ====
+    	======================================= -->
+
+
+    	<!-- =====================================
+    	==== Start Header -->
+
+    	<header class="header valign bg-img" data-scroll-index="0" data-overlay-dark="5" data-background="img2/bg1.jpg" data-stellar-background-ratio="0.5">
+
+    		<div class="container">
+    			<div class="row">
+    				<div class="full-width text-center caption mt-30">
+    					<h4>Eventurate</h4>
+                        <h1>¿No sabes qué hacer?</h1>
+                        <p>Qué esperas para unirte y buscar una nueva aventura.</p>
+                        <a  class="butn butn-light mt-30" th:href="@{/users/registerCompany}">
+                            <span>Registrar Empresa</span>
+                        </a>
+                        <a  class="butn butn-bg mt-30" th:href="@{/users/registerClient}">
+                            <span>Registrar Aventurero</span>
+                        </a>
+    				</div>
+    			</div>
+    		</div>
+    	</header>
+
+    	<!-- End Header ====
+    	======================================= -->
+
+
+
+        <!-- =====================================
+        ==== Start Hero -->
+
+        <section class="hero section-padding bg-gray" data-scroll-index="1">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="offset-lg-1 col-lg-10">
+
+                        <div class="intro text-center mb-80">
+                            <h5>Sobre nosotros</h5>
+                            <h3>No solo una página web si no un punto de reunión</h3>
+                            <p>Eventurate es una plataforma web creada por un grupo de estudiantes de la Universidad Peruana de Ciencias Aplicadas (UPC), los cuales buscan sosegar la necesidad de muchas personas al buscar u obtener información de un evento.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item text-center mb-md50">
+                            <div class="img-overlay bg-img" data-overlay-dark="7" data-background="img2/1.jpg"></div>
+                            
+                            <h6>Programación web</h6>
+                            <p>Esta plataforma fue creada como un presente trabajo para el curso de programación web de la Universidad Peruana de Ciencias Aplicadas </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item text-center mb-md50">
+                            <div class="img-overlay bg-img" data-overlay-dark="7" data-background="img2/2.jpg"></div>
+                            
+                            <h6>Desarrollo</h6>
+                            <p>Eventurate está desarrollado con la tecnología de Springboot y sus diferentes herramientas que la complementan. Asimismo, se utilizó para los estilos las facilidades que brinda Bootstrap. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item text-center mb-sm50">
+                            <div class="img-overlay bg-img" data-overlay-dark="7" data-background="img2/3.jpg"></div>
+                            
+                            <h6>Planeación</h6>
+                            <p>El desarrollo fue realizado con apoyo de plataformas como github para el desarrollo colaborativo y trello para la planeación del proyecto</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item text-center">
+                            <div class="img-overlay bg-img" data-overlay-dark="7" data-background="img2/4.jpg"></div>
+                            
+                            <h6>Propósito</h6>
+                            <p>Buscamos facilitar y reducir la necesidad de información de eventos locales o virtuales, con el propósito de de aumentar ventas para los negocios y que las personas encuentren diferentes formas de recrearse</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- End Hero ====
+        ======================================= -->
+
+
+       
+
+
+        <!-- =====================================
+        ==== Start Services -->
+
+        <section class="services section-padding bg-gray" data-scroll-index="2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="section-head text-center mb-70 col-sm-12">
+                        <h4>Cómo son nuestros servicios</h4>
+                    </div>
+
+                    <!-- tabs-icon -->
+                    <div class="tabs-icon mb-40 col-lg-8 offset-lg-2 col-md-10 offset-md-1 text-center">
+                        <div class="owl-carousel owl-theme">
+                            <div id="tab-1" class="active item">
+                                
+                                <h6>Multiplataforma</h6>
+                            </div>
+                            <div id="tab-2" class="item">
+                                
+                                <h6>Veracidad</h6>
+                            </div>
+                            <div id="tab-3" class="item">
+                                
+                                <h6>Disponibilidad</h6>
+                            </div>
+                            <div id="tab-4" class="item">
+                                
+                                <h6>Facilidad</h6>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="services-content col-sm-12">
+
+                        <!-- tabs-content -->
+                        <div id="tab-1-content" class="cont active">
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="services-info">
+                                        <h5>Eventurate donde sea</h5>
+                                        <h3>Obten información de tus eventos favoritos cuando quieras</h3>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="serv-cont">
+                                        <p class="mb-10">Conseguir información de tu evento favorito cuándo y dónde quieras nunca fue tan fácil.
+                                        </br>
+                                        puedes buscar información desde tu teléfono o computadora y verificar que el evento que quieres está disponible o si algo ha cambiado desde la última vez que consultaste información.
+                                        </p>
+                                    
+                                    
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="tab-2-content" class="cont">
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="services-info">
+                                        <h5>Con la última información</h5>
+                                        <h3>Nos preocupamos por brindarte la información confiable y actualizada</h3>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="serv-cont">
+                                        <p class="mb-10">No te preocupes por buscar más información en otra página o estar buscando números de contacto, nosotros aseguramos la información que necesitas por ti.</p>
+                                        <p>Solo necesitas buscar tu evento y verificar si algo ha cambiado desde la última vez que visitaste la plataforma.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="tab-3-content" class="cont">
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="services-info">
+                                        <h5>Siempre a tu lado</h5>
+                                        <h3>Puedes solicitar ayuda cuando quieras</h3>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="serv-cont">
+                                        <p class="mb-10">Siempre podrás obtener ayuda cuando lo más lo necesites .</p>
+                                        <p>.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="tab-4-content" class="cont">
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="services-info">
+                                        <h5>Facilidad en todas partes</h5>
+                                        <h3>Creamos algo sencillo para que puedas disfrutar de todos tus eventos .</h3>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="serv-cont">
+                                        <p class="mb-10">Mantente navegando dentro de nuestra plataforma de manera intuitiva e interesante, con íconos que expresar lo que realmente sientes y quieres.</p>
+                                        <p>No esperes más y disfruta de esta maravillosa plataforma que hemos realizado para ti.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="tab-5-content" class="cont">
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="services-info">
+                                        <h5>Creative Web Design</h5>
+                                        <h3>We Build Unique Designs And Creat a Creative Websites.</h3>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="serv-cont">
+                                        <p class="mb-10">Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ubique his dico vituperata uthis dico vituperata ut. in quodsiUbique maluisset vel te.</p>
+                                        <p>Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ubique maluisset vel te, his dico vituperata ut. in quodsiUbique maluisset vel te, his dico vituperata ut in quodsiUbique his dico vituperata.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- End Services ====
+        ======================================= -->
+
+
+       
+        <!-- =====================================
+        ==== Start Numbers -->
+
+        <div class="numbers bg-img bg-fixed" data-overlay-dark="9" data-background="img2/01.jpg">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item text-center mb-md50">
+                            <span class="icon ti-heart"></span>
+                            <h4 class="count">368</h4>
+                            <h6>Seguidores</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item text-center mb-md50">
+                            <span class="icon ti-layers-alt"></span>
+                            <h4 class="count">937</h4>
+                            <h6>Eventos realizados</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item text-center mb-sm50">
+                            <span class="icon ti-import"></span>
+                            <h4 class="count">438</h4>
+                            <h6>Boletos descargados</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item text-center">
+                            <span class="icon ti-shield"></span>
+                            <h4 class="count">500</h4>
+                            <h6>Empresas que confian en nosotros</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- End Numbers ====
+        ======================================= -->
+
+
+
+
+        <!-- =====================================
+        ==== Start Teams -->
+
+        <section class="team section-padding" data-scroll-index="3">
+            <div class="container">
+                <div class="row">
+
+                    <div class="section-head text-center col-sm-12">
+                        <h4>Equipo de desarrollo</h4>
+                    </div>
+                    
+                    <div class="owl-carousel owl-theme text-center offset-lg-1 col-lg-10">
+                        <div class="item">
+                            <div class="team-img">
+                                <img src="img2/team/JeanAguirre.png" alt="">
+                                <div class="info valign">
+                                    <div class="text-center full-width">
+                                        <div class="social">
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-behance"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h6>Jean Marko Aguirre</h6>
+                            <span>Developer</span>
+                        </div>
+
+                        <div class="item">
+                            <div class="team-img">
+                                <img src="img2/team/MatiasBeteta.png" alt="">
+                               <div class="info valign">
+                                    <div class="text-center full-width">
+                                        <div class="social">
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-behance"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h6>Matias Beteta</h6>
+                            <span>Developer</span>
+                        </div>
+
+                        <div class="item">
+                            <div class="team-img">
+                                <img src="img2/team/ArturoGago.png" alt="">
+                                <div class="info valign">
+                                    <div class="text-center full-width">
+                                        <div class="social">
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-behance"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h6>Arturo Gago</h6>
+                            <span>Developer</span>
+                        </div>
+
+                        <div class="item">
+                            <div class="team-img">
+                                <img src="img2/team/BrianSolis.png" alt="">
+                                <div class="info valign">
+                                    <div class="text-center full-width">
+                                        <div class="social">
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-behance"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h6>Brian Solis</h6>
+                            <span>Developer</span>
+                        </div>
+                        <div class="item">
+                            <div class="team-img">
+                                <img src="img2/team/KarlaSantos.png" alt="">
+                                <div class="info valign">
+                                    <div class="text-center full-width">
+                                        <div class="social">
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="#0" class="icon">
+                                                <i class="fab fa-behance"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h6>Karla</h6>
+                            <span>Developer</span>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- End Teams ====
+        ======================================= -->
+
+
+
+
+
+        <!-- =====================================
+        ==== Start Footer -->
+
+        <footer class="text-center">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="logo" href="#">
+                    <img src="img2/logo-light.png" alt="logo">          
+                </a>
+                
+                
+
+                <p>&copy; 2020 Eventurate. All Rights Reserved.</p>
+
+            </div>
+        </footer>
+
+        <!-- End Footer ====
+        ======================================= -->
+
+
+
+
+       
+        <!-- jQuery -->
+        <script src="js2/jquery-3.0.0.min.js"></script>
+        <script src="js2/jquery-migrate-3.0.0.min.js"></script>
+
+        <!-- popper.min -->
+        <script src="js2/popper.min.js"></script>
+
+        <!-- bootstrap -->
+        <script src="js2/bootstrap.min.js"></script>
+
+        <!-- scrollIt -->
+        <script src="js2/scrollIt.min.js"></script>
+
+        <!-- jquery.waypoints.min -->
+        <script src="js2/jquery.waypoints.min.js"></script>
+
+        <!-- jquery.counterup.min -->
+        <script src="js2/jquery.counterup.min.js"></script>
+
+        <!-- owl carousel -->
+        <script src="js2/owl.carousel.min.js"></script>
+
+        <!-- jquery.magnific-popup js -->
+        <script src="js2/jquery.magnific-popup.min.js"></script>
+
+        <!-- stellar js -->
+        <script src="js2/jquery.stellar.min.js"></script>
+
+        <!-- isotope.pkgd.min js -->
+        <script src="js2/isotope.pkgd.min.js"></script>
+
+        <!-- YouTubePopUp.jquery -->
+        <script src="js2/YouTubePopUp.jquery.js"></script>
+
+        <!-- Map -->
+        <script src="js2/map.js"></script>
+
+        <!-- validator js -->
+        <script src="js2/validator.js"></script>
+
+        <!-- custom scripts -->
+        <script src="js2/scripts.js"></script>
+
+       
+
+    </body>
+</html>
